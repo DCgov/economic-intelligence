@@ -33,9 +33,9 @@ navigation:
 - text: Introduction
   internal: true
   url: ./
-- text: Labor Indicators
+- text: Employment and Labor
   internal: true
-  url: labor-indicators.html
+  url: employment-labor.html
 - text: 'Income, Wages, and Taxes'
   internal: true
   url: income-wages-taxes.html
