@@ -45,6 +45,9 @@ navigation:
 - text: Construction Activity
   internal: true
   url: construction-activity.html
+- text: Affordable Housing Production and Preservation
+  internal: true
+  url: affordable-production-preservation.html
 
 # Repo list
 # List repos that you would like to appear on the homepage here
