@@ -24,7 +24,7 @@ author:
 baseurl: '/economic-intelligence'
 
 # Point the logo URL at a file in your repo or hosted elsewhere by your organization
-logourl: /assets/img/dc_logo.png
+logourl: '/assets/img/dc-logo.png'
 logoalt: The D.C. flag
 
 # Navigation
