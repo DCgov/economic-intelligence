@@ -4,9 +4,9 @@ permalink: /
 title: Introduction
 ---
 
-###DMPED's Economic Intelligence Dashboard
+###DMPED Economic Intelligence Dashboard
 
-DMPED's Economic Intelligence team promotes data-driven policymaking. We use data to tell the story of what's going on in Washington DC's economy. Explore the story of our city here. 
+DMPED is using data to create positive change and build good government for the citizens of the District of Columbia. We focus on collecting and compiling information about our city, and in particular on the DC economic development priorities: jobs, quality affordable housing, and community-focused development.
 
 ###Suggestions?
 If you have any ideas, data, or interest in helping us grow our dashboard, email us [here](mailto:dmped.econintel@dc.gov).
