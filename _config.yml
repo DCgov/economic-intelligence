@@ -52,9 +52,9 @@ navigation:
 # Repo list
 # List repos that you would like to appear on the homepage here
 repos:
-- name: guides-template
+- name: economic-intelligence
   description: 
-  url: https://github.com/DCgov/guides-template
+  url: https://github.com/DCgov/economic-intelligence
 
 google_analytics_ua: 
 
