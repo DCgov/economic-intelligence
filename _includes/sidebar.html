@@ -1,7 +1,19 @@
+
+<style>
+
+nav {
+  position:fixed;left:60px;
+
+}
+
+</style>
+
 <aside>
   <p class="intro">{{ site.subtitle }}</p>
   <a class="skip-link visuallyhidden focusable" href="#main">Skip to Main Content</a>
   <nav class="sidebar-nav" role="navigation">
+
+
     <ul>
       {% for link in site.navigation %}
         {% if link.glossary == true %}
