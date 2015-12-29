@@ -60,6 +60,14 @@ strong {
     display: inline-block;
 }
 
+.site-subtitle {
+    font-size:1.00em;
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-weight: normal;
+    color: #919395;
+    margin:0;
+}
+
 h2 {
     font-weight: 400;
     font-style: normal;
@@ -466,7 +474,7 @@ Desktop Styles
     .logo {
         display: block;
         max-height: 5em;
-        margin-top: -1.5em;
+        margin-top: -1.0em;
         float: right;
     }
 

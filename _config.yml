@@ -30,7 +30,7 @@ logoalt: We Are Washington DC
 # Navigation
 # List links that should appear in the site sidebar here
 navigation:
-- text: Introduction
+- text: 'Intro & Quick Stats'
   internal: true
   url: ./
 - text: Population
@@ -42,9 +42,9 @@ navigation:
 - text: 'Income, Wages, and Taxes'
   internal: true
   url: income-wages-taxes.html
-- text: Housing and Affordability
+- text: Housing Indicators
   internal: true
-  url: housing-affordability.html
+  url: housing-indicators.html
 - text: Construction Activity
   internal: true
   url: construction-activity.html
