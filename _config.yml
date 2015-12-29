@@ -24,8 +24,8 @@ author:
 baseurl: '/economic-intelligence'
 
 # Point the logo URL at a file in your repo or hosted elsewhere by your organization
-logourl: '/assets/img/dc-logo.png'
-logoalt: The D.C. flag
+logourl: '/assets/img/we-are-wdc.png'
+logoalt: We Are Washington DC
 
 # Navigation
 # List links that should appear in the site sidebar here
@@ -59,10 +59,10 @@ navigation:
 # List repos that you would like to appear on the homepage here
 repos:
 - name: economic-intelligence
-  description: 
+  description:
   url: https://github.com/DCgov/economic-intelligence
 
-google_analytics_ua: 
+google_analytics_ua:
 
 # Style Variables
-brand_color: "#DA253B"
+brand_color: "#BF0000"
