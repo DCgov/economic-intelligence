@@ -40,7 +40,3 @@ It includes only data that is public, so certain indicators that DMPED uses are 
 	</object>
 </div>
 
-###Suggestions?
-If you have any ideas, data, or interest in helping us grow our dashboard, email us [here](mailto:dmped.econintel@dc.gov).
-
-For more information on the Office of the Deputy Mayor for Planning and Economic Development visit [dmped.dc.gov](http://dmped.dc.gov).
