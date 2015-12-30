@@ -1,16 +1,7 @@
-
-<!-- 
-nav {
-  position:fixed;left:60px;
-
-} -->
-
-
 <aside>
+  <p class="intro">{{ site.subtitle }}</p>
   <a class="skip-link visuallyhidden focusable" href="#main">Skip to Main Content</a>
   <nav class="sidebar-nav" role="navigation">
-
-
     <ul>
       {% for link in site.navigation %}
         {% if link.glossary == true %}
@@ -19,11 +10,11 @@ nav {
             </li>
         {% elsif link.internal == true %}
             <li>
-              <a href="{{ site.baseurl }}/{{ link.url }}">{{ link.text }}</a>
+              <a href="{{ site.baseurl }}/{{ link.url }}"> {{link.icon}} {{ link.text }}</a>
             </li>
         {% else %}
             <li>
-              <a href="{{ link.url }}">{{ link.text }}</a>
+              <a href="{{ link.url }}"> {{link.icon}} {{ link.text }}</a>
             </li>
         {% endif %}
       {% endfor %}
