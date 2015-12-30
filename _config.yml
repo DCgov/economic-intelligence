@@ -34,27 +34,35 @@ navigation:
 - text: 'Intro & Quick Stats'
   internal: true
   url: ./
+  icon: 'assets/img/intro.svg'
 - text: Population
   internal: true
   url: population.html
+  icon: 'assets/img/population.svg'
 - text: Employment and Labor
   internal: true
   url: employment-labor.html
+  icon: 'assets/img/employment.svg'
 - text: 'Income, Wages, and Taxes'
   internal: true
   url: income-wages-taxes.html
+  icon: 'assets/img/income.svg'
 - text: Housing Indicators
   internal: true
   url: housing-indicators.html
+  icon: 'assets/img/housing.svg'
 - text: Construction Activity
   internal: true
   url: construction-activity.html
+  icon: 'assets/img/construction.svg'
 - text: Affordable Housing Production and Preservation
   internal: true
   url: affordable-production-preservation.html
+  icon: 'assets/img/affordable.svg'
 - text: DMPED Real Estate
   internal: true
   url: dmped-real-estate.html
+  icon: 'assets/img/dmped.svg'
 
 # Repo list
 # List repos that you would like to appear on the homepage here

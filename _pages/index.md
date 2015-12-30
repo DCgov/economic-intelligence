@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /
-title: Introduction
+title: Introduction and Quick Stats
 ---
 
 ###Office of the Deputy Mayor for Planning & Economic Development (DMPED) <br/> Economic Intelligence Dashboard
