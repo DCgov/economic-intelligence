@@ -9,7 +9,7 @@
             </li>
         {% elsif link.internal == true %}
             <li>
-              <img src="{{ link.icon }}" width="50" align="left"><a href="{{ site.baseurl }}/{{ link.url }}">{{ link.text }}</a>
+              <a href="{{ site.baseurl }}/{{ link.url }}"><img src="{{ link.icon }}" width="20" align="left"> {{ link.text }}</a>
             </li>
         {% else %}
             <li>

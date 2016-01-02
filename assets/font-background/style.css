@@ -1,17 +1,17 @@
 @font-face {
-    font-family: 'icomoon';
-    src:    url('fonts/icomoon.eot?fpio1v');
-    src:    url('fonts/icomoon.eot?fpio1v#iefix') format('embedded-opentype'),
-        url('fonts/icomoon.ttf?fpio1v') format('truetype'),
-        url('fonts/icomoon.woff?fpio1v') format('woff'),
-        url('fonts/icomoon.svg?fpio1v#icomoon') format('svg');
+    font-family: 'eiicons';
+    src:    url('/assets/fonts/eiicons.eot?fpio1v');
+    src:    url('fonts/eiicons.eot?fpio1v#iefix') format('embedded-opentype'),
+        url('fonts/eiicons.ttf?fpio1v') format('truetype'),
+        url('fonts/eiicons.woff?fpio1v') format('woff'),
+        url('fonts/eiicons.svg?fpio1v#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
+    font-family: 'eiicons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -45,4 +45,3 @@
 .icon-population:before {
     content: "\e907";
 }
-
