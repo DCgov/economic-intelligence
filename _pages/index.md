@@ -6,7 +6,7 @@ title: Introduction
 
 ###Office of the Deputy Mayor for Planning & Economic Development (DMPED) <br/> Economic Intelligence Dashboard
 
-DMPED is using economic data to produce positive change and build good government for District of Columbia residents. We focus on collecting and compiling information about our city, in particular on D.C.’s economic development priorities that create more pathways to the middle class: jobs, quality affordable housing, and community-focused development.
+DMPED is using economic data to drive positive change and build good government for District of Columbia residents. We focus on collecting and compiling information about our city, in particular on D.C.’s economic development priorities that create more pathways to the middle class: jobs, quality affordable housing, and community-focused development.
 
 This site is an online version of the Deputy Mayor for Planning and Economic Development’s weekly dashboard. This dashboard is also transmitted to the City Administrator, the Mayor, and other senior staff, so they can be aware of economic trends and context. It includes only data that is public, so certain indicators that DMPED uses are not included.
 
