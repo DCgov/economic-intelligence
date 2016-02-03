@@ -4,7 +4,9 @@ permalink: /
 title: Introduction
 ---
 
-###Office of the Deputy Mayor for Planning & Economic Development (DMPED) <br/> Economic Intelligence Dashboard
+<h3>
+Office of the Deputy Mayor for Planning & Economic Development (DMPED) <br/> Economic Intelligence Dashboard
+</h3>
 
 DMPED is using economic data to drive positive change and build good government for District of Columbia residents. We focus on collecting and compiling information about our city, in particular on D.C.’s economic development priorities that create more pathways to the middle class: jobs, quality affordable housing, and community-focused development.
 
@@ -15,7 +17,7 @@ If you have any ideas, data, or interest in helping us grow our dashboard, email
 
 <hr style="width: 454px; margin:1em 0">
 
-##Quick Stats
+<h2> Quick Stats </h2>
 
 <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
 <div class='tableauPlaceholder' style='width: 454px; height: 759px;'>
