@@ -45,6 +45,7 @@ h1,
 h3,
 h4,
 h5,
+
 strong {
     font-family: "Avenir Next Demi", "Avenir Next", Arial, sans-serif;
     font-weight: 600;
@@ -82,6 +83,25 @@ h4 {
 
 .page-title {
     margin-top: .727272727em; /* 16/22 */
+}
+
+.ahtable td, .ahtable th {
+    width: 454px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.ahtable thead, .ahtable tbody { display: block; }
+
+.ahtable thead, .ahtable tbody {
+    width: 454px;
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+
+.ahtable tbody {
+    height: 454px;
 }
 
 /*

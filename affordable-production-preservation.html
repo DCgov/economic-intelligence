@@ -108,3 +108,104 @@ title: Affordable Housing Production and Preservation
 		<param name='bootstrapWhenNotified' value='true' />
 	</object>
 </div>
+
+<hr style="width: 454px; margin:1em 0">
+
+<h2>
+Affordable Housing Projects Started & Delivered
+</h2>
+Jan. 2015 to Date
+
+<script src="assets/js/d3.js"></script>	
+<div class="ahtable" style= "width:454px, height: 454px">
+	<script type="text/javascript">
+		
+		d3.csv("assets/data/affhousing-del.csv", function(data) {
+	        console.log(data);
+
+	        function tabulate(data, columns) {
+	            var table = d3.select("div.ahtable").append("table")
+	            thead = table.append("thead"),
+	            tbody = table.append("tbody");
+
+	            // append the header row
+	            thead.append("tr")
+	                .selectAll("th")
+	                .data(columns)
+	                .enter()
+	                .append("th")
+	                .attr("style", "font-size: 1.0em")
+	            .text(function(column) { return column; });
+
+	            // create a row for each object in the data
+	            var rows = tbody.selectAll("tr")
+	                .data(data)
+	                .enter()
+	                .append("tr");
+
+	            // create a cell in each row for each column
+	            var cells = rows.selectAll("td")
+	                .data(function(row) {
+	                    return columns.map(function(column) {
+	                        return {column: column, value: row[column]};
+	                    });
+	                })
+	                .enter()
+	                .append("td")
+	                .attr("style", "font-size: 0.8em")
+	                .html(function(d) { return d.value; });
+
+	            return table;
+	        }
+
+	        // render the table
+	        var peopleTable = tabulate(data, ["Project Delivered", "Ward", "Units"]);
+	    }); 
+
+	    d3.csv("assets/data/affhousing-st.csv", function(data) {
+	        console.log(data);
+
+	        function tabulate(data, columns) {
+	            var table = d3.select("div.ahtable").append("table")
+	            thead = table.append("thead"),
+	            tbody = table.append("tbody");
+
+	            // append the header row
+	            thead.append("tr")
+	                .selectAll("th")
+	                .data(columns)
+	                .enter()
+	                .append("th")
+	                .attr("style", "font-size: 1.0em")
+	            .text(function(column) { return column; });
+
+	            // create a row for each object in the data
+	            var rows = tbody.selectAll("tr")
+	                .data(data)
+	                .enter()
+	                .append("tr");
+
+	            // create a cell in each row for each column
+	            var cells = rows.selectAll("td")
+	                .data(function(row) {
+	                    return columns.map(function(column) {
+	                        return {column: column, value: row[column]};
+	                    });
+	                })
+	                .enter()
+	                .append("td")
+	                .attr("style", "font-size: 0.8em")
+	                .html(function(d) { return d.value; });
+
+	            return table;
+	        }
+
+	        // render the table
+	        var peopleTable = tabulate(data, ["Project Started", "Ward", "Units"]);
+	    }); 
+
+
+	</script>
+</div>
+
+
