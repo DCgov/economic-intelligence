@@ -85,30 +85,35 @@ h4 {
     margin-top: .727272727em; /* 16/22 */
 }
 
-.ahtable td, .ahtable th, .dmpedtable td, .dmpedtable th {
-    width: 454px;
+.dmpedtable td, .dmpedtable th, .ahlist th, .ahlist td {
+    width: 475px;
     border-bottom: 1px solid #ddd;
     text-align: left;
     padding-left: 5px;
 }
 
-.dmpedtable td, .dmpedtable th {
+.ahtable td, .ahtable tr, .ahtable th {
+    width: 475px;
+    height: 40px;
+    border: 1px solid #fff;
+    text-align: center;
+}
+
+.dmpedtable td, .dmpedtable th, .ahtable td, .ahtable th {
     font-size: small;
 }
 
-.ahtable thead, .ahtable tbody, .dmpedtable thead, .dmpedtable tbody { display: block; }
 
-.ahtable thead, .ahtable tbody, .dmpedtable thead, .dmpedtable tbody {
-    width: 454px;
+.ahtable thead, .ahtable tbody, .dmpedtable thead, .dmpedtable tbody, .ahlist thead, .ahlist tbody { 
+    display: block; 
+    width: 475px;
     overflow-y: auto;    /* Trigger vertical scroll    */
     overflow-x: hidden;  /* Hide the horizontal scroll */
 }
 
-.ahtable tbody {
+.ahlist tbody {
     height: 454px;
 }
-
-
 
 
 /*
