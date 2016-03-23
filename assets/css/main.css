@@ -115,6 +115,35 @@ h4 {
     height: 454px;
 }
 
+/* SVG Images
+==================================
+*/
+
+.axis text{
+    font-family: Arial;
+    font-size: 13px;
+    color: #333333;
+    text-anchor: end;
+    }
+
+.axis path{
+    fill:none;
+    stroke:#333333 ;
+    stroke-width: 1.5px;
+    shape-rendering: crispEdges
+    }
+
+.bar{
+    stroke: none;
+    fill: #012C3B;
+    }
+
+.textlabel{
+    font-family:  Arial;
+    font-size:10px;
+    color: #333333;
+    text-anchor: middle;
+    }
 
 /*
 Glossary

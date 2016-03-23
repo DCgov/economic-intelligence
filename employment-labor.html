@@ -29,7 +29,7 @@ title: Employment and Labor
 
 
 
-<hr style="width: 454px; margin:1em 0">
+<hr style="width: 475px; margin:1em 0">
 
 <div class='tableauPlaceholder' style='width: 454px; height: 369px;'>
 	<noscript>
@@ -53,30 +53,134 @@ title: Employment and Labor
 	</object>
 </div>
 
-<hr style="width: 454px; margin:1em 0">
+<hr style="width: 475px; margin:1em 0">
 
-<div class='tableauPlaceholder' style='width: 454px; height: 369px;'>
-	<noscript>
-		<a href='#'><img alt='*UnemploymentbyWard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Un&#47;UnemploymentbyWard&#47;UnemploymentbyWard&#47;1_rss.png' style='border: none' /></a>
-	</noscript>
-	<object class='tableauViz' width='454' height='369' style='display:none;'>
-		<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-		<param name='site_root' value='' />
-		<param name='name' value='UnemploymentbyWard&#47;UnemploymentbyWard' />
-		<param name='tabs' value='no' /><param name='toolbar' value='yes' />
-		<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Un&#47;UnemploymentbyWard&#47;UnemploymentbyWard&#47;1.png' /> 
-		<param name='animate_transition' value='yes' />
-		<param name='display_static_image' value='yes' />
-		<param name='display_spinner' value='yes' />
-		<param name='display_overlay' value='yes' />
-		<param name='display_count' value='yes' />
-		<param name='showVizHome' value='no' />
-		<param name='showTabs' value='y' />
-		<param name='bootstrapWhenNotified' value='true' />
-	</object>
-</div>
+<script src="assets/js/d3.js"></script>	
+	<div class="svg1">
+    <script type="text/javascript">
+    var margin = {top:20, right:0, bottom:60, left:60},
+    	width  = 454;
+    	height = 350;
+    	padding = 100;
+	
+	var svg = d3.select("div.svg1")
+    	.append("svg")
+    	.attr("width", "100%")
+    	.attr("height", "100%")
+    	.attr("viewBox", "0 0 " + width + " " + height); 
+    
+    var yScale = d3.scale.linear()
+    	.range([height - margin.top - margin.bottom, 0]);
+    
+    var xScale = d3.scale.ordinal()
+    	.rangeRoundBands([0, width - margin.right - margin.left], .1);
+    
+    var xAxis = d3.svg.axis()
+    	.scale(xScale)
+    	.orient("bottom");
+    
+    var yAxis = d3.svg.axis()
+    	.scale(yScale)
+    	.orient("left")
+    	.tickFormat(function(d) {return d + "%"})
+      
+    d3.csv("assets/data/unemployment-ward.csv", function(error, data) {
 
-<hr style="width: 454px; margin:1em 0">
+//map function goes through every element, then returns a number for Unemployment
+   		data = data.map(function(d) { 
+    	d["Unemployment"] = +d["Unemployment"]; 
+    	return d;
+   	});
+
+//yscale's domain is from zero to the maximum "Unemployment"
+	yScale.domain([0, d3.max(data, function(d){ return d["Unemployment"]; })]);
+
+//xscale is unique values in Ward (Ward, since they are all different)
+	xScale.domain(data.map(function(d){ return d["Ward"]; }));
+    
+    svg.append("g")
+    	.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    	.selectAll(".bar")
+    	.data(data)
+    	.enter()
+    	.append("rect")
+    	.attr("class", "bar")
+    	.attr("x", function(d){ return xScale(d["Ward"]); })
+    	.attr("y", function(d){ return yScale(d["Unemployment"]); })
+    	.attr("height", function(d){ return height - margin.top - margin.bottom - yScale(d["Unemployment"]); })
+    	.attr("width", function(d){ return xScale.rangeBand(); })
+    	.style("font-family", "Arial");
+
+//adding y axis to the chart
+	svg.append("g")
+    	.attr("class", "y axis")
+    	.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    	.call(yAxis)
+    	.style("color", "#333333")
+    	.style("font-family", "Arial");
+//adding x axis to the bottom of chart
+
+	svg.append("g")
+    	.attr("class", "x axis")
+    	.attr("transform", "translate(" + margin.left + "," + (height - margin.bottom) + ")")
+    	.call(xAxis)
+    	.style("color", "#333333")
+    	.style("font-family", "Arial");
+//bar labels
+	svg.append("g")
+    	.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    	.selectAll(".textlabel")
+    	.data(data)
+    	.enter()
+    	.append("text")
+    	.attr("class", "textlabel")
+    	.style("font-family", "Arial")
+    	.style("font-size", "15px")
+    	.attr("x", function(d){ return xScale(d["Ward"]) + (xScale.rangeBand()/2); })
+    	.attr("y", function(d){ return yScale(d["Unemployment"]) - 3 ; })
+    	.text(function(d){ return (d["Unemployment"] + "%"); });
+// Y-axis labels
+	svg.append("text")
+    	.attr("text-anchor", "middle")
+    	.style("font-size", "13px")
+    	.style("color", "#333333")
+		.attr("transform", "translate ("+ (padding/4) + "," +(height/2)+") rotate(-90)")
+    	.text("Unemployment")
+    	.style("font-family", "Arial"); 
+
+// X-axis labels
+	svg.append("text")
+    	.attr("text-anchor", "middle")
+    	.style("font-size", "13px")
+    	.style("color", "#333333")
+    	.attr("transform", "translate("+ (width/2) + "," +(height-(padding/4)) + ")")
+    	.text("Ward")
+    	.style("font-family", "Arial"); 
+ 
+ //title for the chart 
+	svg.append("text")
+    	.attr("text-anchor", "middle")
+    	.style("font-size", "16px")
+    	.style("color", "#333333")
+    	.attr("transform", "translate("+ (width/3.78) + "," +(height/30) + ")")
+    	.text("Unemployment by Ward")
+    	.style("font-family", "Arial");
+
+//source
+	svg.append("text")
+    	.attr("text-anchor", "middle")
+    	.style("font-size", "13px")
+    	.style("color", "#333333")
+    	.attr("transform", "translate("+ (width/3.2) + "," +(height/1) + ")")
+    	.text("Source:Bureau of Labor Statistics")
+    	.style("font-family", "Arial")
+	})
+
+</script>
+
+
+
+<hr style="width: 475px; margin:1em 0">
 
 <div class='tableauPlaceholder' style='width: 454px; height: 369px;'>
 	<noscript>
@@ -99,7 +203,7 @@ title: Employment and Labor
 	</object>
 </div>
 
-<hr style="width: 454px; margin:1em 0">
+<hr style="width: 475px; margin:1em 0">
 
 <div class='tableauPlaceholder' style='width: 454px; height: 1189px;'>
 	<noscript>
@@ -125,7 +229,7 @@ title: Employment and Labor
 	</object>
 </div>
 
-<hr style="width: 454px; margin:1em 0">
+<hr style="width: 475x; margin:1em 0">
 
 <p style="font-size: 0.8em; color: #919395"> <sup>1</sup> BLS Total Nonfarm and Total Private Sector Employment available <a href='http://beta.bls.gov/dataViewer/view/1cd9b7275659472fbc0f873d18d3a038'>here</a>. 
 <br>
