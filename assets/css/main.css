@@ -81,6 +81,12 @@ h4 {
     text-transform: uppercase;
 }
 
+h3 {
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.375em;
+}
+
 .page-title {
     margin-top: .727272727em; /* 16/22 */
 }
