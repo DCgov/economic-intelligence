@@ -19,26 +19,34 @@ If you have any ideas, data, or interest in helping us grow our dashboard, email
 
 <h2> Quick Stats </h2>
 
-<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
-<div class='tableauPlaceholder' style='width: 454px; height: 759px;'>
-	<noscript>
-		<a href='#'><img alt='Quickstats ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Qu&#47;QuickStats_0&#47;Quickstats&#47;1_rss.png' style='border: none' /></a>
-	</noscript>
-	<object class='tableauViz' width='454' height='759' style='display:none;'>
-		<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-		<param name='site_root' value='' />
-		<param name='name' value='QuickStats_0&#47;Quickstats' />
-		<param name='tabs' value='no' />
-		<param name='toolbar' value='yes' />
-		<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Qu&#47;QuickStats_0&#47;Quickstats&#47;1.png' /> 
-		<param name='animate_transition' value='yes' />
-		<param name='display_static_image' value='yes' />
-		<param name='display_spinner' value='yes' />
-		<param name='display_overlay' value='yes' />
-		<param name='display_count' value='yes' />
-		<param name='showVizHome' value='no' />
-		<param name='showTabs' value='y' />
-		<param name='bootstrapWhenNotified' value='true' />
-	</object>
+<div class="datatable">
+	<table>
+		<thead>
+			<tr><th>Population</th><th>Households</th>
+		</thead>
+		<tbody>
+			<tr class="headline-data"><td>672,228</td><td>267,415</td></tr>	
+			<tr><td>2015</td><td>2014</td></tr>
+		</tbody>
+	</table>
+	<table>
+		<thead>
+			<tr><th>Jobs</th><th>Unemployment</th>
+		</thead>
+		<tbody>
+			<tr class="headline-data"><td>775,400</td><td>6.5%</td></tr>	
+			<tr><td>Feb 2016</td><td>Feb 2016</td></tr>
+		</tbody>
+	</table>
+	<table>
+		<thead>
+			<tr><th>DC GDP</th><th>Personal Income</th>
+		</thead>
+		<tbody>
+			<tr class="headline-data"><td>$116B</td><td>$49B</td></tr>	
+			<tr><td>2014</td><td>2015 Q4</td></tr>
+		</tbody>
+	</table>
 </div>
+
 

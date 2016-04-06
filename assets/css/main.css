@@ -121,6 +121,28 @@ h3 {
     height: 454px;
 }
 
+.datatable table {
+    width: 475px;
+}
+
+.datatable td, .datatable th {
+    border-bottom: 1px solid #ddd;
+    width: 33.3%;
+    text-align: center;
+    padding-left: 5px;
+    font-size: small;
+}
+
+.datatable th {
+    padding-top: 20px;
+}
+
+.datatable tr.headline-data td {
+    font-size: 300%;
+    font-weight: bold;
+    border-bottom: none;
+}
+
 /* SVG Images
 ==================================
 */
