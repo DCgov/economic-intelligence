@@ -81,12 +81,6 @@ h4 {
     text-transform: uppercase;
 }
 
-h3 {
-    font-weight: 200;
-    font-style: normal;
-    font-size: 1.375em;
-}
-
 .page-title {
     margin-top: .727272727em; /* 16/22 */
 }
@@ -384,16 +378,58 @@ section:before {
 
 .wrap {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 1.0em auto auto auto;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 header {
     width: 100%;
-    border-bottom: 4px solid {{ site.brand_color }};
     background-color: #fff;
-    padding: 2em 0;
+}
+
+.navbar {
+    width: 100%;
+    background-color: {{ site.brand_color }};
+}
+
+.navbar ul {
+    display: block;
+    max-width: 1200px;
+    padding-left: 0px;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar li a { 
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 4px 16px 4px 8px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #960000;
+}
+
+.navbar a,
+.navbar a:link, 
+.navbar a:visited {
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.466666667;
+    color: #FFF;
+    border-bottom: none;
 }
 
 /*
@@ -575,7 +611,9 @@ Desktop Styles
     .logo {
         display: block;
         max-height: 5em;
-        margin-top: -1.0em;
+        padding-bottom: 0.5em;
+        padding-right: 0.5em;
+        margin-top: -0.5em;
         float: right;
     }
 
