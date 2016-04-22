@@ -129,11 +129,11 @@ title: Employment and Labor
 //bar labels
 	svg.append("g")
     	.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-    	.selectAll(".textlabel")
+    	.selectAll(".centerlabel")
     	.data(data)
     	.enter()
-    	.append("text")
-    	.attr("class", "textlabel")
+    	.append("text")3
+    	.attr("class", "centerlabel")
     	.style("font-family", "Arial")
     	.style("font-size", "15px")
     	.attr("x", function(d){ return xScale(d["Ward"]) + (xScale.rangeBand()/2); })

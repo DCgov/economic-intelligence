@@ -5,7 +5,7 @@ title: Housing Indicators
 ---
 
 This page contains broad housing indicators covering the DC housing market as a whole. For information on efforts to preserve and protect affordable housing in the District, please visit the <a href="http://dcgov.github.io/economic-intelligence/affordable-production-preservation.html">Affordable Housing Production and Preservation</a> tab. 
-<br>
+<br><br>
 
 <script src="assets/js/d3.js"></script>
 	<div class="svg1">
@@ -91,11 +91,11 @@ This page contains broad housing indicators covering the DC housing market as a 
 // horizontal bar labels
     svg.append("g")
      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-    .selectAll(".textlabel")
+    .selectAll(".rightlabel")
     .data(data)
     .enter()
     .append("text")
-    .attr("class", "textlabel")
+    .attr("class", "rightlabel")
     .style("font-family", "Arial")
     .attr("x", function(d){ return xScale(parseFloat(d["Percentage"])) ;  })
  .attr("y", function(d){ return yScale(d["LabelD3"]) + yScale.rangeBand()/2; })

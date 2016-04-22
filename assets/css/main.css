@@ -160,31 +160,37 @@ h4 {
     fill: #012C3B;
     }
 
-.textlabel{
+.centerlabel{
     font-family:  Arial;
     font-size:10px;
     color: #333333;
     text-anchor: middle;
     }
 
-    .bar1{
-         stroke: none;
+.rightlabel{
+    font-family:  Arial;
+    color: #333333;
+    text-anchor: right;
+    }
+
+.bar1{
+    stroke: none;
     fill: steelblue ;
-
-
     }
 
 
-    path { 
+path { 
     stroke: steelblue;
     stroke-width: 2;
     fill: none;
 }
+
 path1 { 
     stroke: steelblue;
     stroke-width: 2;
     fill: none;
 }
+
 .axis path,
 .axis line {
     fill: none;
