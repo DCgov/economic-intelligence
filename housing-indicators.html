@@ -7,26 +7,154 @@ title: Housing Indicators
 This page contains broad housing indicators covering the DC housing market as a whole. For information on efforts to preserve and protect affordable housing in the District, please visit the <a href="http://dcgov.github.io/economic-intelligence/affordable-production-preservation.html">Affordable Housing Production and Preservation</a> tab. 
 <br>
 
-<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
-<div class='tableauPlaceholder' style='width: 454px; height: 369px;'>
-	<noscript>
-		<a href='#'><img alt='*Tenure ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Te&#47;Tenure_1&#47;Tenure&#47;1_rss.png' style='border: none' /></a>
-	</noscript>
-	<object class='tableauViz' width='454' height='369' style='display:none;'>
-		<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-		<param name='site_root' value='' /><param name='name' value='Tenure_1&#47;Tenure' />
-		<param name='tabs' value='no' /><param name='toolbar' value='yes' />
-		<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Te&#47;Tenure_1&#47;Tenure&#47;1.png' /> 
-		<param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
-		<param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
-		<param name='display_count' value='yes' /><param name='showVizHome' value='no' />
-		<param name='showTabs' value='y' />
-		<param name='bootstrapWhenNotified' value='true' />
-	</object>
-</div>
+<script src="assets/js/d3.js"></script>
+	<div class="svg1">
+    <script type="text/javascript">
+
+     var outerWidth = 475;
+      var outerHeight = 350;
+      var margin = { left: 75, top: 30, right: 0, bottom: 60 };
+      var padding = 100;
+
+
+
+      var barPadding = 0.2;
+      var barPaddingOuter = 0.1;
+      var xColumn = "Percentage";
+      var yColumn = "LabelD3";
+      
+      var xAxisLabelOffset = 75;
+
+
+      var innerWidth  = outerWidth  - margin.left - margin.right;
+      var innerHeight = outerHeight - margin.top  - margin.bottom;
+
+
+      var svg = d3.select("div.svg1")
+        .append("svg")
+        .attr("width",  outerWidth)
+        .attr("height", outerHeight)
+        .attr("viewBox", "0 0 " + outerWidth + " " + outerHeight); 
+
+
+      var g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+      var xAxisG = g.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + innerHeight + ")")
+
+        
+
+      var yAxisG = g.append("g")
+        .attr("class", "y axis");
+
+
+      var xScale = d3.scale.linear()
+      .range([0, innerWidth - margin.right - margin.left], .1);
+
+
+      var yScale = d3.scale.ordinal()
+      .rangeRoundBands([innerHeight , 13], barPadding, barPaddingOuter);
+
+
+      var xAxis = d3.svg.axis().scale(xScale).orient("bottom")
+        .ticks(7)
+        .tickFormat(function(d) {return d + "%"});
+
+
+      var yAxis = d3.svg.axis().scale(yScale).orient("left");
+
+
+      function render(data){
+        xScale.domain([0, d3.max(data, function(d) { return Math.ceil (d[xColumn]); })]);
+
+
+        yScale.domain(data.map( function(d) { return d[yColumn]; }));
+
+
+        xAxisG.call(xAxis);
+        yAxisG.call(yAxis);
+
+
+        var bars = g.selectAll("rect").data(data);
+        bars.enter().append("rect")
+          .attr("height", yScale.rangeBand());
+        bars
+          .attr("x", 0)
+          .attr("class", "bar1")
+          .attr("y",     function (d){ return yScale(d[yColumn]); })
+          .attr("width", function (d){ return xScale(d[xColumn]); });
+
+    
+// horizontal bar labels
+    svg.append("g")
+     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .selectAll(".textlabel")
+    .data(data)
+    .enter()
+    .append("text")
+    .attr("class", "textlabel")
+    .style("font-family", "Arial")
+    .attr("x", function(d){ return xScale(parseFloat(d["Percentage"])) ;  })
+ .attr("y", function(d){ return yScale(d["LabelD3"]) + yScale.rangeBand()/2; })
+    .text(function(d){ return (d["Percentage"] + "%"); }); 
+
+
+// X-axis labels
+    svg.append("text")
+    .attr("text-anchor", "middle")
+    .style("font-size", "13px")
+    .style("color", "#333333")
+    .attr("transform", "translate("+ (outerWidth/2) + "," +(outerHeight-(padding/4)) + ")")
+    .text("% of Households")
+    .style("font-family", "Arial"); 
+
+ //title for the chart 
+
+    svg.append("text")
+    .attr("text-anchor", "middle")
+    .style("font-size", "16px")
+    .style("color", "#333333")
+    .attr("transform", "translate("+ (outerWidth/3.78) + "," +(outerHeight/30) + ")")
+    .text("Housing Tenure of DC Residents")
+    .style("font-family", "Arial");
+
+     //source
+
+    svg.append("text")
+    .attr("text-anchor", "middle")
+    .style("font-size", "13px")
+    .style("color", "#333333")
+    .attr("transform", "translate("+ (outerWidth/3.2) + "," +(outerHeight/1) + ")")
+    .text("Source: US Census ACS 5-year 2010-2014")
+    .style("font-family", "Arial")
+
+
+svg.append("text")
+    .attr("text-anchor", "left")
+    .style("font-size", "13px")
+    .style("color", "#333333")
+    .attr("transform", "translate("+ (outerWidth/50) + "," +(outerHeight/12) + ")")
+    .text("2014")
+    .style("font-family", "Arial")
+
+
+
+        bars.exit().remove();
+      }
+      function type(d){
+        d.Percentage = +d.Percentage;
+        return d;
+      }
+      d3.csv("assets/data/Housing.csv", type, render);
+    </script>
+    </div>
+
 
 <hr style="width: 454px; margin:1em 0">
-
+<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
 <div class='tableauPlaceholder' style='width: 454px; height: 369px;'>
 	<noscript>
 		<a href='#'><img alt='*TotalUnits ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TotalUnits&#47;TotalUnits&#47;1_rss.png' style='border: none' /></a>

@@ -151,7 +151,7 @@ h4 {
 .axis path{
     fill:none;
     stroke:#333333 ;
-    stroke-width: 1.5px;
+    stroke-width: 1px;
     shape-rendering: crispEdges
     }
 
@@ -166,6 +166,49 @@ h4 {
     color: #333333;
     text-anchor: middle;
     }
+
+    .bar1{
+         stroke: none;
+    fill: steelblue ;
+
+
+    }
+
+
+    path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+path1 { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+    div.tooltip {   
+  position: absolute;           
+  text-align: center;  
+
+  width: 60px;                  
+  height: 28px;                 
+  padding: 2px;             
+  font: 13px Arial;        
+  background: white;   
+  border: 4px; 
+  border-color: black;     
+  border-radius: 4px;           
+  pointer-events: none;         
+}
+
+
 
 /*
 Glossary

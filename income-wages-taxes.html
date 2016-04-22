@@ -75,26 +75,224 @@ title: Income, Wages, and Taxes
 
 <hr style="width: 454px; margin:1em 0">
 
-<div class='tableauPlaceholder' style='width: 454px; height: 369px;'>
-	<noscript>
-		<a href='#'><img alt='*Annual Tax ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TotalTaxRevenuesbyFY&#47;AnnualTax&#47;1_rss.png' style='border: none' /></a>
-	</noscript>
-	<object class='tableauViz' width='454' height='369' style='display:none;'>
-		<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-		<param name='site_root' value='' />
-		<param name='name' value='TotalTaxRevenuesbyFY&#47;AnnualTax' />
-		<param name='tabs' value='no' /><param name='toolbar' value='yes' />
-		<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TotalTaxRevenuesbyFY&#47;AnnualTax&#47;1.png' /> 
-		<param name='animate_transition' value='yes' />
-		<param name='display_static_image' value='yes' />
-		<param name='display_spinner' value='yes' />
-		<param name='display_overlay' value='yes' />
-		<param name='display_count' value='yes' />
-		<param name='showVizHome' value='no' />
-		<param name='showTabs' value='y' />
-		<param name='bootstrapWhenNotified' value='true' />
-	</object>
+<script src="assets/js/d3.js"></script>	
+	<div class="svg4">
+    <script type="text/javascript">
+    var margin = {top: 20, right: 0, bottom: 60, left: 60},
+
+    width = 454;
+    height = 350;
+    padding = 100; 
+
+
+
+// Adds the svg canvas
+var svg = d3.select("div.svg4")
+    .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+       .attr("viewBox", "0 0 " + width + " " + height);
+
+
+    var g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        var div = d3.select("body").append("div")   
+    .attr("class", "tooltip")               
+    .style("opacity", 0);
+
+
+// Parse the date / time
+var parseDate = d3.time.format("%m/%d/%y").parse;
+var formatTax = d3.format(",.2f");
+var formatTime = d3.time.format("%Y");
+
+// Set the ranges
+var x = d3.time.scale()
+        .range([0, width - margin.right - margin.left], .1)
+        .nice();
+
+
+var y = d3.scale.linear()
+        .range([height - margin.top - margin.bottom, 20])
+        .nice();
+
+// Define the axes
+var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom")
+            .ticks(5);
+
+var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .tickFormat(function(d) {return "$" + d + "B"});
+            
+
+
+// Define the line
+     var valueline = d3.svg.line()
+     
+    .x(function(d) { return x(d.Date); })
+    .y(function(d) { return y(d["Tax Collections"]); });
+
+    
+    
+
+// Get the data
+d3.csv("assets/data/Yearly Tax Collections.csv", function(error, data) {
+    data.forEach(function(d) {
+        d.Date = parseDate(d.Date);
+        d["Tax Collections"] = formatTax(+d["Tax Collections"]/1000000000);
+    });
+
+
+ // Scale the range of the data
+    x.domain(d3.extent(data, function(d) { return d.Date; }));
+
+    y.domain([0, d3.max(data, function(d) { return Math.ceil (d["Tax Collections"]); })
+            ]);
+
+svg.selectAll("dot")    
+        .data(data)         
+    .enter()
+    .append("circle")                               
+        .attr("r", 5)       
+        .attr("cx", function(d) { return (x(d.Date)); })       
+        .attr("cy", function(d) { return y(d["Tax Collections"]); })
+        .style("fill", "white")
+         .attr("transform", "translate(" + margin.left + "," + margin.top + ")")     
+        .on("mouseover", function(d) {      
+            div.transition()        
+                .duration(200)      
+                .style("opacity", .9);      
+            div .html(formatTime(d.Date) + "<br/>"  + "$" + d["Tax Collections"] + "B")  
+                .style("left", (d3.event.pageX) + "px")     
+                .style("top", (d3.event.pageY - 28) + "px");    
+            })                  
+        .on("mouseout", function(d) {       
+            div.transition()        
+                .duration(500)      
+                .style("opacity", 0.9);   
+        });
+
+    // Add the valueline path.
+         svg.append("path")
+        .attr("class", "line")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+         .attr("d", valueline(data));
+
+    // Add the X Axis
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(" + margin.left + "," + (height - margin.bottom) + ")")
+        .call(xAxis);
+
+    // Add the Y Axis
+    svg.append("g")
+        .attr("class", "y axis")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+        .call(yAxis);
+
+        // Y-axis labels
+    svg.append("text")
+    .attr("text-anchor", "middle")
+    .style("font-size", "13px")
+    .style("color", "#333333")
+    .attr("transform", "translate ("+ (padding/4) + "," +(height/2)+") rotate(-90)")
+    .text("Tax Revenue")
+    .style("font-family", "Arial"); 
+
+    // X-axis labels
+    svg.append("text")
+    .attr("text-anchor", "middle")
+    .style("font-size", "13px")
+    .style("color", "#333333")
+    .attr("transform", "translate("+ (width/2) + "," +(height-(padding/4)) + ")")
+    .text("Fiscal Year")
+    .style("font-family", "Arial"); 
+
+     //source
+
+    svg.append("text")
+    .attr("text-anchor", "middle")
+    .style("font-size", "13px")
+    .style("color", "#333333")
+    .attr("transform", "translate("+ (width/4.5) + "," +(height/1) + ")")
+    .text("Source: DC OCFO")
+    .style("font-family", "Arial")
+
+    //title for the chart 
+
+    svg.append("text")
+    .attr("text-anchor", "middle")
+    .style("font-size", "16px")
+    .style("color", "#333333")
+    .attr("transform", "translate("+ (width/3) + "," +(height/30) + ")")
+    .text("DC Total Tax Revenues by Fiscal Year")
+    .style("font-family", "Arial");
+
+
+    svg.append("text")
+    .attr("text-anchor", "left")
+    .style("font-size", "13px")
+    .style("color", "#333333")
+    .attr("transform", "translate("+ (width/20) + "," +(height/12) + ")")
+    .text("2000 to 2015")
+    .style("font-family", "Arial")
+
+    
+  
+    //line labels
+
+    svg.append('g')
+    .classed('labels-group', true)
+    .selectAll('text')
+    .data(data)
+    .enter()
+
+    .append('text')
+    .filter(function(d, i) { return i === 0||i === (data.length - 1) })
+  .classed('label',true)
+.style("font-size", "13px")
+.style("font-family", "Arial")
+    .classed('label',true)
+    .attr({
+        'x':function(d,i) {
+            return x(d.Date);
+
+        },
+          'y':function(d,i) {
+            return y(d["Tax Collections"]);
+        }
+    })
+     .text(function(d,i){
+        return "$" + d["Tax Collections"] + "B";
+     })
+     .attr("transform", "translate(" + 60 + "," + 33 + ")") 
+
+
+
+});
+
+</script>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div style="max-width: 454px">	For more insights from DC's OCFO, visit <a href='http://districtmeasured.com'>District, Measured</a>, the blog of the District’s Office of Revenue Analysis. </div>
 
