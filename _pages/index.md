@@ -34,8 +34,8 @@ If you have any ideas, data, or interest in helping us grow our dashboard, email
 			<tr><th>Jobs</th><th>Unemployment</th>
 		</thead>
 		<tbody>
-			<tr class="headline-data"><td>777,400</td><td>6.4%</td></tr>	
-			<tr><td>Apr 2016</td><td>Apr 2016</td></tr>
+			<tr class="headline-data"><td>777,400</td><td>6.1%</td></tr>	
+			<tr><td>Apr 2016</td><td>May 2016</td></tr>
 		</tbody>
 	</table>
 	<table>
