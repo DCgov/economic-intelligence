@@ -23,21 +23,17 @@ If you have any ideas, data, or interest in helping us grow our dashboard, email
 	<table>
 		<thead>
 			<tr><th>Population</th><th>Households</th>
-		</thead>
 		<tbody>
 			<tr class="headline-data"><td>672,228</td><td>267,415</td></tr>	
 			<tr><td>2015</td><td>2014</td></tr>
 		</tbody>
-	</table>
 	<table>
 		<thead>
 			<tr><th>Jobs</th><th>Unemployment</th>
-		</thead>
 		<tbody>
 			<tr class="headline-data"><td>777,400</td><td>6.1%</td></tr>	
 			<tr><td>Apr 2016</td><td>May 2016</td></tr>
 		</tbody>
-	</table>
 	<table>
 		<thead>
 			<tr><th>DC GDP</th><th>Personal Income</th>
@@ -46,7 +42,6 @@ If you have any ideas, data, or interest in helping us grow our dashboard, email
 			<tr class="headline-data"><td>$116B</td><td>$49B</td></tr>	
 			<tr><td>2014</td><td>2015 Q4</td></tr>
 		</tbody>
-	</table>
-</div>
+
 
 
