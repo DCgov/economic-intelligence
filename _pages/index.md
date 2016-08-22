@@ -31,8 +31,8 @@ If you have any ideas, data, or interest in helping us grow our dashboard, email
 		<thead>
 			<tr><th>Jobs</th><th>Unemployment</th>
 		<tbody>
-			<tr class="headline-data"><td>777,400</td><td>6.1%</td></tr>	
-			<tr><td>Apr 2016</td><td>May 2016</td></tr>
+			<tr class="headline-data"><td>773,100</td><td>5.9%</td></tr>	
+			<tr><td>Jul 2016</td><td>Jul 2016</td></tr>
 		</tbody>
 	<table>
 		<thead>
@@ -40,7 +40,7 @@ If you have any ideas, data, or interest in helping us grow our dashboard, email
 		</thead>
 		<tbody>
 			<tr class="headline-data"><td>$116B</td><td>$49B</td></tr>	
-			<tr><td>2014</td><td>2015 Q4</td></tr>
+			<tr><td>2014</td><td>2016 Q1</td></tr>
 		</tbody>
 
 
