@@ -31,15 +31,15 @@ If you have any ideas, data, or interest in helping us grow our dashboard, email
 		<thead>
 			<tr><th>Jobs</th><th>Unemployment</th>
 		<tbody>
-			<tr class="headline-data"><td>773,100</td><td>5.9%</td></tr>	
-			<tr><td>Jul 2016</td><td>Jul 2016</td></tr>
+			<tr class="headline-data"><td>778,900</td><td>6.0%</td></tr>	
+			<tr><td>Aug 2016</td><td>Aug 2016</td></tr>
 		</tbody>
 	<table>
 		<thead>
 			<tr><th>DC GDP</th><th>Personal Income</th>
 		<tbody>
-			<tr class="headline-data"><td>$116B</td><td>$49B</td></tr>	
-			<tr><td>2014</td><td>2016 Q1</td></tr>
+			<tr class="headline-data"><td>$116B</td><td>$51B</td></tr>	
+			<tr><td>2014</td><td>2016 Q2</td></tr>
 		</tbody>
 
 
