@@ -24,8 +24,8 @@ If you have any ideas, data, or interest in helping us grow our dashboard, email
 		<thead>
 			<tr><th>Population</th><th>Households</th>
 		<tbody>
-			<tr class="headline-data"><td>672,228</td><td>281,787</td></tr>	
-			<tr><td>2015</td><td>2015</td></tr>
+			<tr class="headline-data"><td>681,170</td><td>281,787</td></tr>	
+			<tr><td>2016</td><td>2015</td></tr>
 		</tbody>
 	<table>
 		<thead>
