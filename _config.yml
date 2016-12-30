@@ -56,8 +56,8 @@ navigation:
   internal: true
   url: dmped-real-estate.html
 - text: Economic Development Map
-  internal: true
-  url: economic-development-map.html
+  internal: false
+  url: http://open.dc.gov/econintel-wardtool/
 
 # Repo list
 # List repos that you would like to appear on the homepage here
