@@ -1,5 +1,6 @@
 Project Started,Ward,Units
 Walter Reed (Developer Only),4,318
+Town Center South,6,15
 5201 Hayes St (Deanwood Hills),7,150
 Altamont Place (Rehab),8,36
 Unity 25,4,27
@@ -38,7 +39,7 @@ SOME Benning Road,7,178
 The Homestead Apartments,4,45
 1011 M Street NW,2,7
 "1326 Florida Avenue, NE",5,4
-1350 Maryland Residential,6,7
+1350 Maryland Ave Residential,6,7
 "3559 Georgia Avenue, NW",1,2
 Atlantic Terrace/Atlantic Gardens,8,303
 Capitol Crossing,6,50
@@ -57,7 +58,7 @@ Miriam's House,1,25
 Morton Street Mews ,1,2
 Ontario Court,1,27
 Owen House,5,4
-Partner Arms 1,4,14
+Partner Arms I,4,14
 Phyllis Wheatley,6,84
 "Pleasant Park Cooperative, Inc.",7,60
 The Apollo ,6,35
@@ -69,4 +70,3 @@ The One-Five,6,5
 Valencia Apartments,4,32
 Vizcaya Apartments,4,17
 West End Square 50,2,55
-,,
