@@ -38,8 +38,8 @@ If you have any ideas, data, or interest in helping us grow our dashboard, email
 		<thead>
 			<tr><th>DC GDP</th><th>Personal Income</th>
 		<tbody>
-			<tr class="headline-data"><td>$126B</td><td>$52B</td></tr>	
-			<tr><td>2016 Q1</td><td>2016 Q4</td></tr>
+			<tr class="headline-data"><td>$128B</td><td>$52B</td></tr>	
+			<tr><td>2016 Q3</td><td>2016 Q4</td></tr>
 		</tbody>
 
 
