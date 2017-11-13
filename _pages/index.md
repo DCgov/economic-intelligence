@@ -31,8 +31,8 @@ If you have any ideas, data, or interest in helping us grow our dashboard, email
 		<thead>
 			<tr><th>Jobs</th><th>Unemployment</th>
 		<tbody>
-			<tr class="headline-data"><td>785,200</td><td>5.7%</td></tr>	
-			<tr><td>Feb 2017</td><td>Feb 2017</td></tr>
+			<tr class="headline-data"><td>790,300</td><td>6.5%</td></tr>	
+			<tr><td>Sept 2017</td><td>Sept 2017</td></tr>
 		</tbody>
 	<table>
 		<thead>
