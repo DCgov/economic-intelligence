@@ -1,26 +1,31 @@
 Project Started,Ward,Units
 1164 Bladensburg Road NE,5,65
-Lockwood Apartments,6,13
-MEDES,8,3
-Penn 11 ,6,3
-Maplewood Courts,8,94
-Parkway Overlook,8,220
-Woodmont Crossing,8,176
+2814 Georgia Ave NW,1,1
 300 8th St NE,6,5
 3614 12th St NE,5,1
+811 Upshur St NW,4,1
 Boathouse,2,22
 Clifton Street,1,17
 Hill East Phase I,7,104
 Kipling House,6,5
+Lockwood Apartments,6,13
+Maplewood Courts,8,94
 Meadow Green Court,7,60
+MEDES,8,3
 Old Engine Co. 13,6,48
+Parkway Overlook,8,220
+Partner Arms II,4,12
+Penn 11 ,6,3
 St. Thomas,2,4
 The Solstice,7,146
 The Wren,1,126
+The Yards Parcel L2 - The Estate,6,53
 Tivoli Gardens TOPA,5,49
 Wah Luck House (Rehab),2,152
 West Half St,6,11
+Woodmont Crossing,8,176
 1329 & 1331 K St Condos,6,1
+1777 Columbia Rd NW,1,6
 1847-9 Good Hope Rd SE Renovation TOPA,8,18
 301 Florida Ave NE,6,4
 3110 & 3112 Georgia Ave NW,1,1
@@ -29,10 +34,12 @@ West Half St,6,11
 4300 12th Street SE,8,26
 49-53 Missouri Ave NW,4,10
 504 C St NE,6,1
+5201 Hayes St (Deanwood Hills),7,150
 528 Kennedy St NW,4,1
 646 H St NE,6,2
 680 I St SW,6,21
 7440 Georgia Ave NW TOPA,4,21
+Altamont Place (Rehab),8,36
 Benning Heights Apartments,7,148
 Elvans Road Townhomes,8,5
 Fort Stevens Place Apartments ,4,59
@@ -66,58 +73,55 @@ The Yards Parcel O-2,6,39
 Totten Mews,5,5
 Tourus,6,2
 United 2nd Street Tenant Association,8,25
-WDC-1 (TOPA),7,202
-1777 Columbia Rd NW,1,6
-5201 Hayes St (Deanwood Hills),7,150
-Altamont Place (Rehab),8,36
 Unity 25,4,27
 Walter Reed (Developer Only),4,318
+WDC-1 (TOPA),7,202
 1108 16th Street NW,2,1
 1244 South Capitol St SE,6,23
 1314 K St SE Cooperative,6,12
+1515 Rhode Island Ave NE,5,2
+"2109 R Street, SE",8,2
+2341 Ontario Rd NW,1,2
+3619 Georgia Ave NW,1,2
 3825 Georgia Ave,4,7
 4000 Benning Road Project,7,71
+501 H St NE,6,3
 713 Lamont St NW,1,15
 Archer Park (Brownstein Commons) (IZ),8,8
 Archer Park (Brownstein Commons) Phase II,8,190
 Barlee Tenant Association,4,37
 Beacon Center Residential,4,99
+Blair Road Project,4,8
+Bowen Flats,8,41
 Buchanan Park Townhomes,6,3
 Fort Chaplin Park Apartments,7,549
 Fort Lincoln Multifamily,5,36
 H Street Connection ,6,32
 Hope and a Home Scattered Sites II,1,14
-Langdon Apartments,5,30
+Kara House,1,10
+Langdon Apartments,5,33
 Luzon Tenants Association,4,43
 Manna Brightwood TOPA Pool,4,52
 Maycroft Redevelopment Project,1,64
+Montage South Condominiums,1,2
 N Street Village,2,95
 Parkchester Apartments,8,94
 Plaza West,6,223
 Pomeroy Gardens,8,60
 Portner Flats,1,96
+Sheriff Road Apartments,7,2
+Skyland Town Center,7,143
+SOME Benning Road,7,178
 St. Matthew's Redevelopment,6,23
 The Havana,6,4
 The Homestead Apartments,4,45
+The Lexicon,5,16
 Thompson Place,4,19
 Town Center South,6,15
-1515 Rhode Island Ave NE,5,2
-"2109 R Street, SE",8,2
-2341 Ontario Rd NW,1,2
-3619 Georgia Ave NW,1,2
-501 H St NE,6,3
-Blair Road Project,4,8
-Bowen Place,8,41
-Kara House,1,10
-Montage South Condominiums,1,2
-Skyland Town Center,7,143
-SOME Benning Road,7,178
-The Lexicon,5,16
 Mai Place,2,4
 10Eleven,2,7
 1628 11th St NW,2,2
 1745N,2,3
-"3559 Georgia Avenue, NW",1,2
 5702 Georgia Ave NW,4,3
 Atlantic Terrace/Atlantic Gardens,8,303
 Capitol Crossing,6,50
@@ -127,7 +131,7 @@ City Homes at Sheridan Station 2c,8,20
 Concord Apartments,4,78
 Cornerstone Community Supportive Housing,4,7
 Elysium Fourteen,1,4
-Girard Street Community Partners ,5,25
+Girard Street Community Partners,5,25
 HFH Transition House,7,7
 Hine Junior High School,6,46
 Kensington Place,5,2
@@ -142,7 +146,7 @@ Patterson House,2,7
 Phyllis Wheatley,6,84
 "Pleasant Park Cooperative, Inc.",7,60
 Reed Row,1,15
-The Apollo ,6,35
+The Apollo,6,35
 The Corcoran Flat ,5,1
 The Edison (Gateway Market),5,38
 The Hendrix,5,4
@@ -150,7 +154,13 @@ The Maryland,6,7
 The Morgan,1,4
 The Norwood,2,84
 The One-Five,6,5
-The V at Georgia Ave,1,2
+The V at Georgia Avenue,1,2
 Valencia Apartments,4,32
 Vizcaya Apartments,4,17
 West End Square 50,2,55
+,,
+,,
+,,
+,,
+,,
+,,
