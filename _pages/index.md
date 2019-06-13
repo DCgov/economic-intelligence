@@ -24,15 +24,15 @@ If you have any ideas, data, or interest in helping us grow our dashboard, email
 		<thead>
 			<tr><th>Population</th><th>Households</th>
 		<tbody>
-			<tr class="headline-data"><td>693,972</td><td>276,546</td></tr>	
-			<tr><td>2017</td><td>2012-2016 est.</td></tr>
+			<tr class="headline-data"><td>702,455</td><td>276,546</td></tr>	
+			<tr><td>2018</td><td>2012-2016 est.</td></tr>
 		</tbody>
 	<table>
 		<thead>
 			<tr><th>Jobs</th><th>Unemployment</th>
 		<tbody>
-			<tr class="headline-data"><td>794,800</td><td>5.6%</td></tr>	
-			<tr><td>Apr 2018</td><td>Apr 2018</td></tr>
+			<tr class="headline-data"><td>793,100</td><td>5.6%</td></tr>	
+			<tr><td>Dec 2018</td><td>Apr 2019</td></tr>
 		</tbody>
 	<table>
 		<thead>
