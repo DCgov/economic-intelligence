@@ -24,22 +24,22 @@ If you have any ideas, data, or interest in helping us grow our dashboard, email
 		<thead>
 			<tr><th>Population</th><th>Households</th>
 		<tbody>
-			<tr class="headline-data"><td>702,455</td><td>276,546</td></tr>	
-			<tr><td>2018</td><td>2012-2016 est.</td></tr>
+			<tr class="headline-data"><td>702,455</td><td>277,985</td></tr>	
+			<tr><td>2018</td><td>2013-2017 est.</td></tr>
 		</tbody>
 	<table>
 		<thead>
 			<tr><th>Jobs</th><th>Unemployment</th>
 		<tbody>
-			<tr class="headline-data"><td>793,100</td><td>5.6%</td></tr>	
-			<tr><td>Dec 2018</td><td>Apr 2019</td></tr>
+			<tr class="headline-data"><td>802,000</td><td>5.6%</td></tr>	
+			<tr><td>July 2019</td><td>July 2019</td></tr>
 		</tbody>
 	<table>
 		<thead>
 			<tr><th>DC GDP</th><th>Personal Income</th>
 		<tbody>
-			<tr class="headline-data"><td>$134B</td><td>$54.4B</td></tr>	
-			<tr><td>2017 Q4</td><td>2018 Q1</td></tr>
+			<tr class="headline-data"><td>$143B</td><td>$58.9B</td></tr>	
+			<tr><td>2019 Q1</td><td>2019 Q1</td></tr>
 		</tbody>
 
 
