@@ -32,7 +32,7 @@ If you have any ideas, data, or interest in helping us grow our dashboard, email
 			<tr><th>Jobs</th><th>Unemployment</th>
 		<tbody>
 			<tr class="headline-data"><td>802,000</td><td>5.6%</td></tr>	
-			<tr><td>July 2019</td><td>July 2019</td></tr>
+			<tr><td>July 2019</td><td>July 2019</td></tr> 
 		</tbody>
 	<table>
 		<thead>
