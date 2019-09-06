@@ -31,13 +31,8 @@ If you have any ideas, data, or interest in helping us grow our dashboard, email
 		<thead>
 			<tr><th>Jobs</th><th>Unemployment</th>
 		<tbody>
-<<<<<<< HEAD
 			<tr class="headline-data"><td>802,000</td><td>5.6%</td></tr>	
 			<tr><td>July 2019</td><td>July 2019</td></tr> 
-=======
-			<tr class="headline-data"><td>793,100</td><td>5.6%</td></tr>	
-			<tr><td>Dec 2018</td><td>Apr 2019</td></tr>
->>>>>>> parent of 82a9ed8... updated front page stats
 		</tbody>
 	<table>
 		<thead>
